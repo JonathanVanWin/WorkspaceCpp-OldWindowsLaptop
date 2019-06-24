@@ -1,0 +1,17 @@
+1) Open Properties of project and Set Configuration to All Configurations, but Platform to x64 (OpenCV only for x64):
+	-C/C++ General
+	  Additional Include Directories: $(SolutionDir)..\..\..\..\..\..\..\OpenCV\build\include (Go to Opencv build include)
+2) Linker General, Additional library directories: $(SolutionDir)..\..\..\..\..\..\..\OpenCV\build\x64\vc14\lib
+
+3) Linker Input, Additional Dependencies: opencv_world343.lib
+					  opencv_world343d.lib
+Apply, Ok
+
+4) Go To: C:\OpenCV\build\x64\vc14\bin  and copy: opencv_world343.dll
+					   	  opencv_world343d.dll
+					and paste them in folder with your
+					code(For example src folder of your project)
+5)Before running, next to the run button, change x86 to x64(OpenCV only for x64)
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!VERY IMPORTANT: ADD ALSO DLLS TO THE SAME FILE WHERE THE EXECUTABLES ARE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
